@@ -15,11 +15,12 @@ const csvOptions = {
 };
 
 
-fetch('https://gist.githubusercontent.com/jessejanderson/09155afe313914498a32baa477584fae/raw/df498d298032a44531019401297f5e76b2a7d548/schools.md')
+fetch('https://gist.githubusercontent.com/jessejanderson/09155afe313914498a32baa477584fae/raw/48ece7cdc4cb2224bcb8ebed2cf45e2c7c50d374/schools.md')
 .then(res => res.text())
 .then(data => {
   let schools = data.match(/(?<=\*\*)(\w|\s)+(?=\*\*)/g) as Array<any>
-  if(schools) {    
+  if(schools) {  
+    console.log(schools.length)  
     schools = schools.map(s => {return{Schools:s}})
     const csvExporter = new ExportToCsv(csvOptions);
     let csv = csvExporter.generateCsv(schools,true);
