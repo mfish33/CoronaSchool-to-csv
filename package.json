@@ -1,0 +1,17 @@
+{
+  "name": "coronaschooltoexcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node-fetch": "^2.5.5",
+    "export-to-csv": "^0.2.1",
+    "node-fetch": "^2.6.0"
+  }
+}
